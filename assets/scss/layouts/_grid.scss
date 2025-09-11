@@ -1,0 +1,185 @@
+// Grid Layout System
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  
+  > * {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+// Custom grid utilities
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 1rem;
+}
+
+.gap-4 {
+  gap: 1.5rem;
+}
+
+.gap-5 {
+  gap: 3rem;
+}
+
+// Flexbox utilities
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+// Responsive flexbox
+@include mobile {
+  .flex-mobile-column {
+    flex-direction: column;
+  }
+  
+  .flex-mobile-center {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include tablet {
+  .flex-tablet-row {
+    flex-direction: row;
+  }
+}
+
+@include desktop {
+  .flex-desktop-between {
+    justify-content: space-between;
+  }
+}
+
+// Grid responsive utilities
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+// Responsive columns
+@include mobile {
+  .col-mobile-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .col-mobile-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@include tablet {
+  .col-tablet-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .col-tablet-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+@include desktop {
+  .col-desktop-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  .col-desktop-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+

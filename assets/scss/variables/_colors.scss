@@ -1,0 +1,42 @@
+// Cisgal Color Palette
+$primary-color: #E91718;
+$secondary-color: #F06001;
+$accent-color: #D8C2AA;
+$dark-color: #000000;
+
+// Bootstrap Color Overrides
+$primary: $primary-color;
+$secondary: $secondary-color;
+
+// Neutral Colors
+$white: #ffffff;
+$light-gray: #f8f9fa;
+$gray-50: #f9fafb;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000000;
+
+// Gradient Colors
+$gradient-primary: linear-gradient(135deg, $dark-color 0%, $primary-color 50%, $secondary-color 100%);
+$gradient-accent: linear-gradient(135deg, $primary-color 0%, $secondary-color 50%, $accent-color 100%);
+$gradient-dark: linear-gradient(135deg, $dark-color 0%, $gray-800 100%);
+
+// Text Colors
+$text-primary: $gray-900;
+$text-secondary: $gray-600;
+$text-muted: $gray-500;
+$text-light: $gray-300;
+
+// Background Colors
+$bg-primary: $primary-color;
+$bg-secondary: $secondary-color;
+$bg-light: $light-gray;
+$bg-dark: $dark-color;
+

@@ -1,0 +1,35 @@
+// Spacing Scale
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,   // 4px
+  2: $spacer * 0.5,    // 8px
+  3: $spacer * 0.75,   // 12px
+  4: $spacer,          // 16px
+  5: $spacer * 1.25,   // 20px
+  6: $spacer * 1.5,    // 24px
+  7: $spacer * 1.75,   // 28px
+  8: $spacer * 2,      // 32px
+  9: $spacer * 2.5,    // 40px
+  10: $spacer * 3,     // 48px
+  11: $spacer * 3.5,   // 56px
+  12: $spacer * 4,     // 64px
+  13: $spacer * 5,     // 80px
+  14: $spacer * 6,     // 96px
+  15: $spacer * 7,     // 112px
+  16: $spacer * 8,     // 128px
+);
+
+// Section Padding
+$section-padding-y: map-get($spacers, 13); // 80px
+$section-padding-y-sm: map-get($spacers, 10); // 48px
+
+// Container Max Widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+

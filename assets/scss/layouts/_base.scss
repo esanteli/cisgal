@@ -1,0 +1,173 @@
+// Base Layout Styles
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-normal;
+  color: $text-primary;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Main content spacing
+main {
+  margin-top: 80px; // Account for fixed header
+  
+  @include mobile {
+    margin-top: 70px;
+  }
+}
+
+// Hero section should be flush with header
+.hero-slider {
+  margin-top: -80px; // Counteract main margin-top
+  
+  @include mobile {
+    margin-top: -70px;
+  }
+}
+
+// Section spacing
+section {
+  padding: $section-padding-y 0;
+  
+  @include mobile {
+    padding: $section-padding-y-sm 0;
+  }
+}
+
+// Container adjustments
+.container {
+  position: relative;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-secondary;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-tight;
+  margin-bottom: 1rem;
+  color: $text-primary;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: $text-secondary;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+// Lists
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Utilities
+.text-gradient {
+  @include gradient-text;
+}
+
+.bg-gradient-primary {
+  @include gradient-primary;
+}
+
+.bg-gradient-accent {
+  @include gradient-accent;
+}
+
+.bg-gradient-dark {
+  @include gradient-dark;
+}
+
+// Spacing utilities
+.py-section {
+  padding: $section-padding-y 0;
+}
+
+.py-section-sm {
+  padding: $section-padding-y-sm 0;
+}
+
+// Animation utilities
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.6s ease;
+  
+  &.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+

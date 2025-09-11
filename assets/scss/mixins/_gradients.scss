@@ -1,0 +1,41 @@
+// Gradient Mixins
+@mixin gradient-primary {
+  background: $gradient-primary;
+}
+
+@mixin gradient-accent {
+  background: $gradient-accent;
+}
+
+@mixin gradient-dark {
+  background: $gradient-dark;
+}
+
+@mixin gradient-text {
+  background: $gradient-primary;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin gradient-overlay {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $gradient-dark;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+

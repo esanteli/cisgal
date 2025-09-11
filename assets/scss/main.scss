@@ -1,0 +1,82 @@
+// Main SCSS File
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+// Import Bootstrap - Comentado porque usamos CDN en HTML
+// @import '../node_modules/bootstrap/scss/bootstrap';
+
+// Import Variables
+@import 'variables/index';
+
+// Import Mixins
+@import 'mixins/index';
+
+// Import Layouts
+@import 'layouts/index';
+
+// Import Components
+@import 'components/index';
+
+// Custom Overrides
+:root {
+  --bs-primary: #{$primary-color};
+  --bs-secondary: #{$secondary-color};
+}
+
+// Additional custom styles
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+// Loading animation
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba($white, 0.3);
+  border-radius: 50%;
+  border-top-color: $white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: $primary-color;
+  color: $white;
+  border: none;
+  border-radius: 50%;
+  @include flex-center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    background: darken($primary-color, 10%);
+    transform: translateY(-2px);
+  }
+  
+  @include mobile {
+    width: 45px;
+    height: 45px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1rem;
+  }
+}

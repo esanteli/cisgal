@@ -1,0 +1,108 @@
+// Footer Component
+.footer {
+  background: $dark-color !important;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: $gradient-primary;
+  }
+  
+  h5, h6 {
+    color: $white;
+    font-weight: $font-weight-semibold;
+    margin-bottom: 1.5rem;
+  }
+  
+  p {
+    color: $text-muted;
+    line-height: $line-height-relaxed;
+  }
+  
+  .social-links {
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba($white, 0.1);
+      border-radius: 50%;
+      color: $white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      margin-right: 0.5rem;
+      
+      &:hover {
+        background: $primary-color;
+        color: $white;
+        transform: translateY(-2px);
+      }
+    }
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    
+    li {
+      margin-bottom: 0.5rem;
+      
+      a {
+        color: $text-muted;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          color: $primary-color;
+          padding-left: 0.5rem;
+        }
+      }
+      
+      i {
+        width: 20px;
+        color: $primary-color;
+      }
+    }
+  }
+  
+  hr {
+    border-color: rgba($white, 0.1);
+  }
+  
+  .text-muted {
+    color: $text-muted !important;
+    
+    a {
+      color: $text-muted;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Mobile Footer Adjustments
+@include mobile {
+  .footer {
+    .social-links {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    
+    .text-md-end {
+      text-align: center !important;
+      margin-top: 1rem;
+    }
+  }
+}
+
+
