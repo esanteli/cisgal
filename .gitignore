@@ -79,3 +79,11 @@ build/
 *.ai
 *.sketch
 *.fig
+
+# Ignorar imágenes pesadas y diseños
+*.psd
+*.ai
+*.tif
+*.bmp
+*.webm
+*.wbm
