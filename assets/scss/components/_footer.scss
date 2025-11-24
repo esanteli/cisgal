@@ -13,15 +13,41 @@
     background: $gradient-primary;
   }
   
+  // Contenedor del footer - justificado de margen a margen
+  .container {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+    @include mobile {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  // Row principal - distribuye columnas uniformemente
+  .row.g-4 {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  // Columnas del footer - distribución uniforme
+  [class*="col-lg"] {
+    flex: 1;
+    min-width: 0; // Permite que las columnas se ajusten
+  }
+  
   h5, h6 {
     color: $white;
     font-weight: $font-weight-semibold;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
   
   p {
     color: $text-muted;
     line-height: $line-height-relaxed;
+    text-align: left;
   }
   
   .social-links {
@@ -93,6 +119,25 @@
 // Mobile Footer Adjustments
 @include mobile {
   .footer {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .row.g-4 {
+      flex-direction: column;
+    }
+    
+    [class*="col-lg"] {
+      flex: none;
+      width: 100%;
+      margin-bottom: 2rem;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
     .social-links {
       text-align: center;
       margin-top: 1rem;
@@ -104,6 +149,8 @@
     }
   }
 }
+
+
 
 
 

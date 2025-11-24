@@ -10,17 +10,17 @@ $font-weight-semibold: 600;
 $font-weight-bold: 700;
 $font-weight-extrabold: 800;
 
-// Font Sizes
-$font-size-xs: 0.75rem;    // 12px
-$font-size-sm: 0.875rem;   // 14px
-$font-size-base: 1rem;     // 16px
-$font-size-lg: 1.125rem;   // 18px
-$font-size-xl: 1.25rem;    // 20px
-$font-size-2xl: 1.5rem;    // 24px
-$font-size-3xl: 1.875rem;  // 30px
-$font-size-4xl: 2.25rem;   // 36px
-$font-size-5xl: 3rem;      // 48px
-$font-size-6xl: 3.75rem;   // 60px
+// Font Sizes (reducidos 1px = 0.0625rem)
+$font-size-xs: 0.6875rem;    // 11px (antes 12px)
+$font-size-sm: 0.8125rem;    // 13px (antes 14px)
+$font-size-base: 0.9375rem;  // 15px (antes 16px)
+$font-size-lg: 1.0625rem;    // 17px (antes 18px)
+$font-size-xl: 1.1875rem;    // 19px (antes 20px)
+$font-size-2xl: 1.4375rem;   // 23px (antes 24px)
+$font-size-3xl: 1.8125rem;   // 29px (antes 30px)
+$font-size-4xl: 2.1875rem;   // 35px (antes 36px)
+$font-size-5xl: 2.9375rem;   // 47px (antes 48px)
+$font-size-6xl: 3.6875rem;   // 59px (antes 60px)
 
 // Line Heights
 $line-height-tight: 1.25;

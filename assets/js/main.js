@@ -284,6 +284,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Console welcome message
     console.log('%c¡Bienvenido a Cisgal! 🚀', 'color: #E91718; font-size: 20px; font-weight: bold;');
     console.log('%cDesarrollado con ❤️ para ofrecer las mejores soluciones tecnológicas', 'color: #666; font-size: 14px;');
+    
+    // ISO Cards Cyclic Animation
+    const isoCards = document.querySelectorAll('.iso-card');
+    if (isoCards.length > 0) {
+        let currentActiveIndex = 0;
+        
+        // Inicializar: primera tarjeta activa
+        isoCards[0].classList.add('active');
+        
+        // Función para rotar la animación
+        function rotateIsoAnimation() {
+            // Remover clase active de todas las tarjetas
+            isoCards.forEach(card => {
+                card.classList.remove('active');
+            });
+            
+            // Agregar clase active a la tarjeta actual
+            isoCards[currentActiveIndex].classList.add('active');
+            
+            // Avanzar al siguiente índice (cíclico)
+            currentActiveIndex = (currentActiveIndex + 1) % isoCards.length;
+        }
+        
+        // Iniciar animación cíclica cada 3 segundos
+        setInterval(rotateIsoAnimation, 3000);
+    }
 });
 
 // Utility functions
@@ -317,6 +343,8 @@ window.CisgalUtils = {
     debounce,
     throttle
 };
+
+
 
 
 
