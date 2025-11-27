@@ -6,11 +6,14 @@
   "scripts": {
     "build-css": "sass assets/scss/main.scss assets/css/main.css",
     "watch-css": "sass --watch assets/scss/main.scss:assets/css/main.css",
-    "dev": "vite",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "vite",
+    "dev:server": "nodemon server/index.js",
     "build": "npm run build-css && vite build",
     "preview": "vite preview",
     "serve": "python -m http.server 8000",
-    "start": "npm run build-css && vite"
+    "start": "npm run build-css && vite",
+    "start:server": "node server/index.js"
   },
   "keywords": [
     "website",
@@ -23,11 +26,23 @@
   "author": "Cisgal",
   "license": "MIT",
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
     "sass": "^1.69.5",
-    "vite": "^6.4.1"
+    "vite": "^6.4.1",
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
   },
   "dependencies": {
-    "bootstrap": "^5.3.2"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "bootstrap": "^5.3.2",
+    "react-google-recaptcha": "^3.1.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0",
+    "nodemailer": "^6.9.7",
+    "dotenv": "^16.3.1"
   },
   "repository": {
     "type": "git",

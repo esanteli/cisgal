@@ -52,11 +52,12 @@
     <main>
         <!-- Page Header -->
         <section class="mantencion-hero">
+            <div class="hero-overlay"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h1 class="display-4 fw-bold mb-3">Planes de Mantención</h1>
-                        <p class="lead text-muted">Mantén tus sistemas contra incendios funcionando al 100% con nuestros planes de mantención especializados</p>
+                        <h1 class="display-4 fw-bold mb-3 text-white">Planes de Mantención</h1>
+                        <p class="lead text-white">Mantén tus sistemas contra incendios funcionando al 100% con nuestros planes de mantención especializados</p>
                     </div>
                 </div>
             </div>
@@ -81,7 +82,7 @@
                     </div>
                     <div class="col-lg-4">
                         <img src="assets/images/mant_redseca.jpg" 
-     alt="Mantención de Red Seca" class="img-fluid rounded">
+     alt="Mantención de Red Seca" class="img-fluid rounded mantencion-image">
                     </div>
                 </div>
 
@@ -94,7 +95,7 @@
                     </div>
                     <div class="col-lg-4">
                         <img src="assets/images/mant_redhumeda.jpg"
-                             alt="Mantención de Red Húmeda" class="img-fluid rounded">
+                             alt="Mantención de Red Húmeda" class="img-fluid rounded mantencion-image">
                     </div>
                 </div>
 
@@ -107,13 +108,12 @@
                     </div>
                     <div class="col-lg-4">
                         <img src="assets/images/mant_sistemacontra (2).png"
-                             alt="Mantención de Red Húmeda" class="img-fluid rounded">
+                             alt="Mantención de Sistema Contra Incendios" class="img-fluid rounded mantencion-image">
                     </div>
                 </div>
             </div>
         </section>
-
-
+<div class="container"><hr class="my-5"></div>
         <!-- Maintenance Process -->
         <section class="py-5">
             <div class="container">
@@ -173,8 +173,7 @@
                     
                     <div class="col-lg-6">
                         <div class="text-center">
-                            <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'><rect fill='%23f8f9fa' width='400' height='300'/><g fill='%23e9ecef'><rect x='50' y='50' width='80' height='60' rx='5'/><rect x='150' y='50' width='80' height='60' rx='5'/><rect x='250' y='50' width='80' height='60' rx='5'/><rect x='50' y='130' width='80' height='60' rx='5'/><rect x='150' y='130' width='80' height='60' rx='5'/><rect x='250' y='130' width='80' height='60' rx='5'/><circle cx='200' cy='220' r='30' fill='%23E91718'/></g></svg>" 
-                                 alt="Mantención de Sistemas" class="img-fluid rounded">
+                            <img src="assets/images/mantencion_2.jpg" alt="Mantención de Sistemas" class="img-fluid rounded">
                         </div>
                     </div>
                 </div>
@@ -239,7 +238,7 @@
             
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="text-muted mb-0">&copy; 2024 Cisgal. Todos los derechos reservados.</p>
+                    <p class="text-muted mb-0">&copy; 2025 Cisgal. Todos los derechos reservados.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <a href="#" class="text-muted me-3">Política de Privacidad</a>
@@ -258,28 +257,24 @@
     <div class="modal fade" id="redSecaModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header-banner" style="background-image: url('assets/images/mant_redseca.jpg');">
+                    <div class="banner-overlay"></div>
+                    <button type="button" class="modal-close-simple" data-bs-dismiss="modal" aria-label="Cerrar">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <h5 class="modal-title">Mantención de Red Seca</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="assets/images/mant_redseca.jpg" alt="Mantención de Red Seca" class="img-fluid rounded mb-3">
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="fw-bold mb-3">Servicios Incluidos:</h6>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-primary me-2"></i>Inspección visual de tuberías</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Pruebas de presión del sistema</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Verificación de válvulas y accesorios</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Limpieza de rociadores</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Calibración de detectores</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Reporte de cumplimiento NFPA</li>
-                            </ul>
-                            <p class="text-muted mt-3">Nuestro servicio de mantención de red seca garantiza que tu sistema esté siempre listo para activarse en caso de emergencia, cumpliendo con todas las normativas de seguridad.</p>
-                        </div>
-                    </div>
+                    <h6 class="fw-bold mb-3">Servicios Incluidos:</h6>
+                    <ul class="list-unstyled mb-4">
+                        <li><i class="fas fa-check text-primary me-2"></i>Inspección visual de tuberías</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Pruebas de presión del sistema</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Verificación de válvulas y accesorios</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Limpieza de rociadores</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Calibración de detectores</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Reporte de cumplimiento NFPA</li>
+                    </ul>
+                    <p class="text-muted">Nuestro servicio de mantención de red seca garantiza que tu sistema esté siempre listo para activarse en caso de emergencia, cumpliendo con todas las normativas de seguridad.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -293,28 +288,24 @@
     <div class="modal fade" id="redHumedaModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header-banner" style="background-image: url('assets/images/mant_redhumeda.jpg');">
+                    <div class="banner-overlay"></div>
+                    <button type="button" class="modal-close-simple" data-bs-dismiss="modal" aria-label="Cerrar">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <h5 class="modal-title">Mantención de Red Húmeda</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="assets/images/mant_redhumeda.jpg" alt="Mantención de Red Húmeda" class="img-fluid rounded mb-3">
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="fw-bold mb-3">Servicios Incluidos:</h6>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-primary me-2"></i>Verificación de presión de agua</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Inspección de bombas de presión</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Limpieza de filtros y válvulas</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Pruebas de funcionamiento</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Mantenimiento de tanques de almacenamiento</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Calibración de sistemas de control</li>
-                            </ul>
-                            <p class="text-muted mt-3">La mantención de red húmeda asegura que el agua esté disponible inmediatamente cuando se active el sistema, proporcionando protección continua y confiable.</p>
-                        </div>
-                    </div>
+                    <h6 class="fw-bold mb-3">Servicios Incluidos:</h6>
+                    <ul class="list-unstyled mb-4">
+                        <li><i class="fas fa-check text-primary me-2"></i>Verificación de presión de agua</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Inspección de bombas de presión</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Limpieza de filtros y válvulas</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Pruebas de funcionamiento</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Mantenimiento de tanques de almacenamiento</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Calibración de sistemas de control</li>
+                    </ul>
+                    <p class="text-muted">La mantención de red húmeda asegura que el agua esté disponible inmediatamente cuando se active el sistema, proporcionando protección continua y confiable.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -328,28 +319,24 @@
     <div class="modal fade" id="sistemaIncendiosModal" tabindex="-1">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
-                <div class="modal-header">
+                <div class="modal-header-banner" style="background-image: url('assets/images/mant_sistemacontra (2).png');">
+                    <div class="banner-overlay"></div>
+                    <button type="button" class="modal-close-simple" data-bs-dismiss="modal" aria-label="Cerrar">
+                        <i class="fas fa-times"></i>
+                    </button>
                     <h5 class="modal-title">Mantención de Sistema Contra Incendios</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <img src="assets/images/mant_sistemacontra (2).png" alt="Mantención de Sistema Contra Incendios" class="img-fluid rounded mb-3">
-                        </div>
-                        <div class="col-md-6">
-                            <h6 class="fw-bold mb-3">Servicios Incluidos:</h6>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-primary me-2"></i>Mantenimiento integral de detectores</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Pruebas de sistemas de alarma</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Inspección de extintores</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Verificación de sistemas de evacuación</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Mantenimiento de sistemas de agentes limpios</li>
-                                <li><i class="fas fa-check text-primary me-2"></i>Capacitación del personal</li>
-                            </ul>
-                            <p class="text-muted mt-3">Nuestro servicio integral de mantención cubre todos los aspectos de tu sistema contra incendios, garantizando protección completa y cumplimiento normativo.</p>
-                        </div>
-                    </div>
+                    <h6 class="fw-bold mb-3">Servicios Incluidos:</h6>
+                    <ul class="list-unstyled mb-4">
+                        <li><i class="fas fa-check text-primary me-2"></i>Mantenimiento integral de detectores</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Pruebas de sistemas de alarma</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Inspección de extintores</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Verificación de sistemas de evacuación</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Mantenimiento de sistemas de agentes limpios</li>
+                        <li><i class="fas fa-check text-primary me-2"></i>Capacitación del personal</li>
+                    </ul>
+                    <p class="text-muted">Nuestro servicio integral de mantención cubre todos los aspectos de tu sistema contra incendios, garantizando protección completa y cumplimiento normativo.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -359,43 +346,14 @@
         </div>
     </div>
 
-    <!-- Contact Modal -->
-    <div class="modal fade" id="contactModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Contáctanos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="contactForm">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="contactName" class="form-label">Nombre *</label>
-                                <input type="text" class="form-control" id="contactName" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="contactEmail" class="form-label">Correo Electrónico *</label>
-                                <input type="email" class="form-control" id="contactEmail" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="contactMessage" class="form-label">Mensaje *</label>
-                                <textarea class="form-control" id="contactMessage" rows="5" required></textarea>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" form="contactForm" class="btn btn-primary">Enviar Mensaje</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- Contact Modal será manejado por React -->
+    <div id="react-contact-modal-root"></div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    <!-- React Contact Modal -->
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

@@ -28,51 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact form handling
+    // Contact form handling - REMOVIDO
+    // El formulario de contacto ahora es manejado por React (src/components/ContactModal.jsx)
+    // El código anterior causaba conflictos con el modal Bootstrap que ya no existe
+    // Si necesitas mantener compatibilidad con formularios HTML antiguos, descomenta y adapta:
+    /*
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = document.getElementById('contactName').value;
-            const email = document.getElementById('contactEmail').value;
-            const message = document.getElementById('contactMessage').value;
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                alert('Por favor, completa todos los campos requeridos.');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Por favor, ingresa un correo electrónico válido.');
-                return;
-            }
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                alert('¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                
-                // Close modal
-                const modal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-                if (modal) {
-                    modal.hide();
-                }
-            }, 2000);
+            // El formulario ahora es manejado completamente por React
         });
     }
+    */
     
     // Initialize tooltips
     const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

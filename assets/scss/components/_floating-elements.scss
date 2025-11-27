@@ -1,0 +1,216 @@
+// Floating Elements - Cilindro y Alarma
+.floating-images-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  margin: -150px 0 -150px 0;
+  z-index: 100;
+  pointer-events: none;
+  
+  @media (max-width: 991px) {
+    min-height: 250px;
+    margin: -120px 0 -120px 0;
+  }
+  
+  @media (max-width: 767px) {
+    min-height: 200px;
+    margin: -100px 0 -100px 0;
+  }
+}
+
+.floating-cylinder {
+  position: absolute;
+  top: 20px;
+  right: 3%;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(50px) scale(0.8);
+  animation: fadeInSlideRight 1s ease-out 0.3s forwards;
+  
+  .cylinder-image {
+    width: 240px; // 60% más grande que 150px
+    height: auto;
+    animation: wiggle-cylinder 3s ease-in-out infinite 1.3s;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    
+    @media (max-width: 991px) {
+      width: 192px; // 60% más grande que 120px
+      right: 2%;
+    }
+    
+    @media (max-width: 767px) {
+      width: 160px; // 60% más grande que 100px
+      right: 1%;
+      top: 10px;
+    }
+  }
+}
+
+.floating-alarm {
+  position: absolute;
+  bottom: 20px;
+  left: 3%;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(-50px) scale(0.8);
+  animation: fadeInSlideLeft 1s ease-out 0.5s forwards;
+  
+  .alarm-image {
+    width: 192px; // 60% más grande que 120px
+    height: auto;
+    animation: wiggle-alarm 3s ease-in-out infinite 1.5s;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    
+    @media (max-width: 991px) {
+      width: 160px; // 60% más grande que 100px
+      left: 2%;
+    }
+    
+    @media (max-width: 767px) {
+      width: 128px; // 60% más grande que 80px
+      left: 1%;
+      bottom: 10px;
+    }
+  }
+}
+
+// Animaciones de entrada
+@keyframes fadeInSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeInSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Animaciones Wiggle
+@keyframes wiggle-cylinder {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, -5px) rotate(2deg);
+  }
+  50% {
+    transform: translate(-3px, 3px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(3px, -3px) rotate(1deg);
+  }
+}
+
+@keyframes wiggle-alarm {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(-5px, 5px) rotate(-2deg);
+  }
+  50% {
+    transform: translate(3px, -3px) rotate(1deg);
+  }
+  75% {
+    transform: translate(-3px, 3px) rotate(-1deg);
+  }
+}
+
+// ANAPCI Card con degradado
+.anapci-card {
+  position: relative;
+  background: linear-gradient(135deg, #E91718 0%, #F06001 50%, #D8C2AA 100%);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 40px rgba(233, 23, 24, 0.3);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: fadeInScaleUp 1s ease-out 0.7s forwards;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 50px rgba(233, 23, 24, 0.4);
+  }
+  
+  .anapci-card-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    
+    .anapci-text {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .anapci-logo {
+      max-width: 200px;
+      height: auto;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      transition: all 0.3s ease;
+    }
+  }
+  
+  &:hover .anapci-logo {
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 767px) {
+    padding: 2rem 1.5rem;
+    
+    .anapci-card-content {
+      .anapci-text {
+        font-size: 1rem;
+      }
+      
+      .anapci-logo {
+        max-width: 150px;
+      }
+    }
+    
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
