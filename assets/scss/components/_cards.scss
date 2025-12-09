@@ -292,6 +292,70 @@
   }
 }
 
+// Banner Section
+.banner-section {
+  background: linear-gradient(135deg, $gray-50 0%, $white 100%);
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba($primary-color, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .banner-wrapper {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba($dark-color, 0.1);
+    background: $white;
+    padding: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover {
+      box-shadow: 0 20px 60px rgba($dark-color, 0.15);
+      transform: translateY(-5px);
+    }
+  }
+  
+  .banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
+    
+    &:hover {
+      transform: rotate(2deg) scale(1.03);
+      filter: brightness(1.05) contrast(1.02);
+    }
+  }
+  
+  @include mobile {
+    padding: 2rem 0;
+    
+    .banner-wrapper {
+      padding: 0.5rem;
+      border-radius: 1rem;
+    }
+    
+    .banner-image {
+      border-radius: 0.75rem;
+      
+      &:hover {
+        transform: rotate(1deg) scale(1.02);
+      }
+    }
+  }
+}
+
 
 
 

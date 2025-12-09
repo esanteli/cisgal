@@ -354,9 +354,9 @@ img {
 }
 .header-fixed .navbar .navbar-brand img {
   transition: all 0.3s ease;
-  height: 60px;
+  height: 80px;
   width: auto;
-  max-height: 60px;
+  max-height: 80px;
 }
 .header-fixed .navbar .navbar-brand img:hover {
   transform: scale(1.05);
@@ -414,9 +414,14 @@ img {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  opacity: 0;
+  animation: carouselFadeIn 1.2s ease-out 0.3s forwards;
 }
 .hero-slider .carousel-item {
   height: 100vh;
+}
+.hero-slider .carousel-item.active:first-child .container {
+  animation: slideInContent 1s ease-out 0.6s both;
 }
 .hero-slider .hero-slide {
   position: relative;
@@ -493,6 +498,34 @@ img {
   background: #ffffff;
 }
 
+@keyframes carouselFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 767px) {
   .hero-slider .hero-slide .container {
     padding: 0 1rem;
@@ -823,6 +856,62 @@ img {
   }
   .iso-card:hover {
     transform: translateY(-3px);
+  }
+}
+
+.banner-section {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+.banner-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(233, 23, 24, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+.banner-section .banner-wrapper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  padding: 1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.banner-section .banner-wrapper:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+.banner-section .banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+.banner-section .banner-image:hover {
+  transform: rotate(2deg) scale(1.03);
+  filter: brightness(1.05) contrast(1.02);
+}
+@media (max-width: 767px) {
+  .banner-section {
+    padding: 2rem 0;
+  }
+  .banner-section .banner-wrapper {
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  .banner-section .banner-image {
+    border-radius: 0.75rem;
+  }
+  .banner-section .banner-image:hover {
+    transform: rotate(1deg) scale(1.02);
   }
 }
 

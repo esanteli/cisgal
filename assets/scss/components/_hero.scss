@@ -3,9 +3,18 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
+  opacity: 0;
+  animation: carouselFadeIn 1.2s ease-out 0.3s forwards;
   
   .carousel-item {
     height: 100vh;
+    
+    // Animación solo para el primer slide activo al cargar
+    &.active:first-child {
+      .container {
+        animation: slideInContent 1s ease-out 0.6s both;
+      }
+    }
   }
   
   .hero-slide {
@@ -97,6 +106,38 @@
         background: $white;
       }
     }
+  }
+}
+
+// Animaciones de entrada del carrusel
+@keyframes carouselFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
